@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework JS 11-12 TEMPLATE</title>
+    <link href="css/style-template.css" rel="stylesheet">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<section>
+<script type="text/>template" id="test">
+    <% for(var i = 0; i < data.length; i++) { %>
+    <div class="wrapper">
+        <div class="header">
+            <span><%= data[i].name %></span>
+        </div>
+
+        <div class="avatar-cont">
+            <img src=<%= data[i].avatar %> class="avatar" />
+        </div>
+
+        <div class="about-me">
+            <span><%= data[i].aboutMe%></span>
+        </div>
+
+        <div class="why-fe">
+            <h2 class="topic"><%= data[i].whyFE %></h2>
+
+            <ul>
+                <% for(var key in data[i].reasons){%>
+
+                <li><%= data[i].reasons[key] %></li>
+
+                <% } %>
+            </ul>
+        </div>
+
+        <div class="phone">
+
+            <h2 class="topic"><%= data[i].contacts.topic %></h2>
+            <span><%= data[i].contacts.number %></span>
+
+        </div>
+
+        <div class="motto">
+            <h2 class="topic"><%= data[i].motto.topic %></h2>
+            <span><%= data[i].motto.text %></span>
+        </div>
+
+    </div>
+    <% } %>
+</script>
+</section>
+</body>
+</html>
