@@ -1,7 +1,5 @@
-/**
- * Created by kozin on 17.10.2016.
- */
-
+// Simple JavaScript Templating
+// John Resig - http://ejohn.org/ - MIT Licensed
 (function(){
     var cache = {};
 
@@ -35,25 +33,3 @@
         return data ? fn( data ) : fn;
     };
 })();
-
-
-// Demo data.
-$(function(){
-
-    var dataObject = {
-        members:[
-            {id:1, name:"hoge", text:"aaaaaaaaaaaaaa"},
-            {id:9, name:"fuga", text:"bbbbbbbbbbbbbb"},
-            {id:15, name:"hoge", text:"cccccccccccccc"},
-            {id:22, name:"fuga", text:"dddddddddddddd"},
-            {id:78, name:"hoge", text:"eeeeeeeeeeeeee"},
-            {id:876, name:"fuga", text:"ffffffffffffff"},
-            {id:1033, name:"hoge", text:"gggggggggggggg"},
-            {id:7899, name:"fuga", text:"hhhhhhhhhhhhhh"}
-        ]
-    }; // -> End of dataObject
-
-    var results = document.getElementById("results");
-    results.innerHTML = tmpl("item_tmpl", dataObject);
-
-});
